@@ -3,6 +3,8 @@
  * https://casafirjan.com.br/coronavirus/covid-19-guia-de-especificacoes-para-producao-de-mascaras-e-texteis
  */
 
+type Material = [string, number];
+
 abstract class Mask {
     industrial: boolean;
     holder: MaskHolder;
@@ -62,21 +64,12 @@ export class HomeMask extends Mask {
         return false;
     }
 };
-
-export enum Materials {
-    POLIESTER = 'POLIESTER',
-    COTTON = 'COTTON',
-    WOOL = 'WOOL',
-    COFFEEFILTER = 'COFFEEFILTER',    //smooth paper like coffee filter
-    NONWOVEN = 'NONWOVEN', // @ BR is TNT (Tecido Nao-Tecido)
-};
-
-export enum MaterialProtection {
-    POLIESTER = 10,
-    COTTON = 45,
-    WOOL = 21,
-    COFFEEFILTER = 25,    //smooth paper like coffee filter
-    NONWOVEN = 40, // @ BR is TNT (Tecido Nao-Tecido)
+const MaskMaterials = {
+    POLIESTER: ['POLIESTER', 10] as Material,
+    COTTON: ['COTTON', 30] as Material,
+    WOOL: ['WOOL', 20] as Material,
+    COFFEEFILTER: ['COFFEEFILTER', 20] as Material,
+    NONWOVEN: ['NONWOVEN', 40] as Material,
 };
 
 export enum MaskHolder {
