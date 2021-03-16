@@ -1,7 +1,8 @@
+import { Walker } from "./walker";
+
 const main = () => {
-    const joeWalker = Walker();
-    joeWalker.putMask();
-    joeWalker.stroll(500);
+    const joeWalker = new Walker();
+    console.log(joeWalker);
 };
 
 export { main };
