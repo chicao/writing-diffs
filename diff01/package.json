@@ -6,7 +6,7 @@
     "main": "./dist/index.js",
     "typings": "./dist/index.d.ts",
     "scripts": {
-        "build": "npm run clean && tsc && npm run swagger && copyfiles -u 1 src/**/*.json dist",
+        "build": "npm run clean && tsc && copyfiles -u 1 src/**/*.json dist",
         "clean": "rimraf dist",
         "lint": "tslint ./src/**/*.ts ./test/**/*.ts",
         "test": "npm run build && jest -w=1 --config ./test/jest.config.js --coverage --silent ",
@@ -14,11 +14,7 @@
         "tsc": "tsc",
         "console": "ts-node --project tsconfig-console.json"
     },
-    "husky": {
-        "hooks": {
-            "pre-commit": "npm run lint && npm run test:unit"
-        }
-    },
+    "husky": {},
     "nyc": {
         "include": [
             "src/**/*.ts"

@@ -1,0 +1,12 @@
+node_modules
+dist
+reports
+.serverless
+.vscode
+.DS_Store
+.node-version
+.nvmrc
+.env
+.stryker-tmp
+*.zip
+docker-compose.yml
