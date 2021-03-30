@@ -76,6 +76,7 @@ export class Pff2Mask extends Mask {
             this.inMetroStamp = true;
         }
     }
+
 };
 
 export class HomeMask extends Mask {
